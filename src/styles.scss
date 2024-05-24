@@ -1,34 +1,36 @@
 @use "@angular/material" as mat;
-
 @include mat.core();
 
-$primary-palette: (
-  300: #969090,
-  500: #735d5d,
-  700: #564848,
+body {
+  margin: 0;
+  padding: 0;
+}
 
+$primary-palette: (
+  400: #7cbd6d,
+  600: #5ea34b,
+  800: #478037,
   contrast: (
-    300: black,
-    500: white,
-    700: white,
+    300: white,
+    500: black,
+    700: black,
   ),
 );
 $secondary-palette: (
-  400: #809595,
-  600: #5d7373,
-  800: #3f4b4c,
+  200: #bd91c9,
+  400: #904ba3,
+  600: #722e8d,
 
   contrast: (
-    400: black,
+    200: black,
+    400: white,
     600: white,
-    800: white,
   ),
 );
 
-$primary: mat.define-palette($primary-palette, 500, 300, 700);
-$accent: mat.define-palette($secondary-palette, 600, 400, 800);
+$primary: mat.define-palette($primary-palette, 600, 400, 800);
+$accent: mat.define-palette($secondary-palette, 400, 200, 600);
 $warn: mat.define-palette(mat.$red-palette);
-$background-color: map_get($secondary-palette, 400);
 
 $theme: mat.define-light-theme(
   (
